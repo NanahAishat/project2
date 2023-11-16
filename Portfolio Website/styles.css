@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    font-weight: 300;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+    color: #fff;
+}
+body{
+    font-size: 1.5rem;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+ul{
+    list-style: none;
+}
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+header{
+    background-color: lightblue;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+nav ul{
+    display: flex;
+    gap: 10px;
+}
+nav li {
+    font-size: 1.8rem;
+    border-bottom: 2px solid transparent;
+    transition: .3s ease-in;
+}
+nav li:hover{
+    border-bottom: 2px solid yellowgreen;
+    transition: .3s ease-in;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 700;
+}
+#hero{
+    background-color: darkblue;
+    padding: 4em 0;
+    border-bottom: 4px solid lightblue;
+
+}
+#hero .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.hero-image img{
+    width: 300px;
+}
+.hero-content{
+    display: grid;
+    place-items: center;
+}
+#hero h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.hi_text{
+    font-size: 6rem;
+    font-weight: 700;
+    color: yellowgreen;
+}
+.name{
+    font-size: 5rem;
+}
+#hero h2{
+    font-size: 4rem;
+    font-weight: 400;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 5s steps(40,end), blink-caret .60s step-end infinite;
+}
+#projects{
+    background-color: darkblue;
+}
+#projects h2{
+    font-size: 6rem;
+    text-align: center;
+    padding: 1em 0;
+}
+.card img{
+    width: 320px;
+    height: 400px;
+}
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 20px;
+}
+.grid-item{
+    display: grid;
+    place-items: center;
+}
+.card{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: .2s ease-in-out;
+
+}
+.card:hover{
+    scale: 1.05;
+    transition: 1s ease-in-out;
+}
+.card:hover .card-content{
+    background-color: #fff;
+    color: darkblue;
+    transform: translateY(0);
+
+}
+.card-content{
+    padding: 2em;
+    position: relative;
+    top: -6.5em;
+    margin-bottom: -6.5em;
+    transition: .5s ease-in-out;
+    transform: translateY(1000px);
+
+}
+.card-content h3{
+    text-align: center;
+}
+#contact{
+    background-color: darkblue;
+}
+#contact h2{
+    font-size: 6rem;
+    text-align: center;
+    margin: .3em 0;
+}
+#contact .container{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+.top-contact{
+    max-width: 800px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit,minmax(80px,1fr));
+}
+.contact-way{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.contact-way i{
+    font-size: 3rem;
+}
+.contact-way h3{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.bottom-contact{
+    max-width: 400px;
+    gap: 10px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit,minmax(80px,1fr));
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+    
+}
+footer{
+    background-color: darkblue;
+    padding: 2em;
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+}
+@keyframes blink-caret {
+    from,
+    to{
+        border-color: transparent;
+    }
+    50%{
+        border-color: orange;
+    }
+    
+}
+@media (max-width:862px) {
+    html{
+        font-size: 10px;
+    }
+    
+}
+@media (max-width:640px) {
+    html{
+        font-size: 8px;
+    }
+    #hero .container{
+        flex-direction: column;
+    }
+    .hero-image{
+        display: grid;
+        place-items: center;
+    }
+    #contact .container{
+        height: 70vh;
+    }
+    
+}
+
+@media (max-width:500px) {
+    #hero .container{
+        flex-direction: column;
+    }
+    .hero-image{
+        display: grid;
+        place-items: center;
+    }
+    #contact .container{
+        height: 50vh;
+    }
+    
+}
